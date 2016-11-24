@@ -13,7 +13,7 @@ It's easy to reset your DreamCompute password in the DreamHost Control Panel.
 * Your new password will be displayed at the top of the page. Please note that
   a may take a few minutes for the change to take affect.
 
-.. figure:: images/DreamCompute-reset-password.png
+.. figure:: 
 
 DreamCompute Dashboard
 ~~~~~~~~~~~~~~~~~~~~~~
