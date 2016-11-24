@@ -67,9 +67,8 @@ any Ubuntu system.  I would recommend making the instance ephemeral, since we
 won't be planning to keep it.
 
 2.  For simplicity, we will use passwords for the two temp instances to connect
-instead of SSH keys, however you can do it either way you prefer.  To setup
-the instances for password authentication, turn it on with the below
-commands.
+instead of SSH keys, however you can do it whatever way you prefer.  To setup password authentication for
+the instances, use the following commands.
 
 .. code-block:: console
 
@@ -81,23 +80,23 @@ commands.
     [root@server]# passwd root
     <set a password>
 
-3.  Create a matching volume in the destination cluster, that is the same size
-or larger than the source volume.
+3.  Create a matching volume in the destination cluster that is the same size
+(or larger) than the source volume.
 
-4.  Attach the source volume to the instance in the source cluster, to the
-temporary instance.  Attach the destination volume to the instance in the
-destination cluster.  There is no need to mount them.
+4.  Attach the source volume to the temporary instance in the source cluster. 
+Attach the destination volume to the temporary instance in the
+destination cluster.  There is no need to mount them to the operating system from the console/command line.
 
 5.  Determine the drive letter of the volumes on both instances.  Generally
-/dev/vda will be the boot drive of your instance, so it will be /dev/vdb or
-/dev/vdc.  You can check for it with a couple commands:
+/dev/vda will be the boot drive of your instance, so additional volumes will be /dev/vdb, /dev/vdc, etc.  
+You can check with the fdisk command:
 
 .. code-block:: console
 
     [root@server]# fdisk -l /dev/vdb | grep Disk
     [root@server]# fdisk -l /dev/vdc | grep Disk
 
-The one that matches the size of the volume is the one to use.  They may have
+The one that matches the size of the volume you are trying to migrate is the one to use.  They may have
 different drive letters on each instance, so take note of that.
 
 6.  Now we can copy the data using dd and ssh.  For this we will login to the
