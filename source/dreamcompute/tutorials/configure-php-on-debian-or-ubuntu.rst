@@ -1,5 +1,5 @@
 =============================================================
-How to Configure PHP on DreamCompute running Debian or Ubuntu
+How to configure PHP on DreamCompute running Debian or Ubuntu
 =============================================================
 
 PHP is a popular server-side scripting language used by many web software and
@@ -14,15 +14,31 @@ Installing PHP
 ~~~~~~~~~~~~~~
 
 PHP comes in different configuration packages on Debian and Ubuntu systems to
-meet your needs for the command line interface (CLI) client or the apache
-module (mod_php aka libphp5.so) or other specializations.
+meet your needs for the command line interface (CLI) client, the apache
+module (mod_php aka libphp5.so), or other specializations.
+
+.. note:: Before attempting to install packages, make sure to double-check
+          what packages your operating system actually supports and that your
+          OS doesn't require any updates (in which case you'll need to run
+          *apt-get update* first). For example Ubuntu 16 only supports PHP 7.
+          You can see what packages your OS supports on the respective packages
+          pages for each OS.
+          
+          `Debian Packages for PHP
+          <https://packages.debian.org/search?keywords=php&searchon=names&suite=stable&section=all>`_
+          
+          `Ubuntu 14 Packages for PHP
+          <http://packages.ubuntu.com/search?keywords=php&searchon=names&suite=trusty&section=all>`_
+          
+          `Ubuntu 16 Packages for PHP
+          <http://packages.ubuntu.com/search?keywords=php&searchon=names&suite=xenial&section=all>`_
 
 PHP CLI Only
 ------------
 
 This will install the /usr/bin/php binary and php.ini file.  This is normally
 used for running scripts in SSH and for cron jobs, or for development, but
-isn't directly usable for websites on apache.
+isn't directly usable for websites on an Apache web server.
 
 .. code-block:: console
 
