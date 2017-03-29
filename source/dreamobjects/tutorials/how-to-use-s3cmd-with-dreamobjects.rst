@@ -94,6 +94,7 @@ do the following:
     enable_multipart = True
     multipart_chunk_size_mb = 15
     use_https = True
+    sig_version = 2
 
 Example Commands
 ~~~~~~~~~~~~~~~~
