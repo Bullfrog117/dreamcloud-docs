@@ -186,6 +186,9 @@ s3cmd (1.6.0 and newer)
 Since 1.6.0, s3cmd supports setting or deleting a CORS config; however it does
 not support getting it back except as a part of an "info" request.
 
+.. note:: Make sure you have a working `installation of S3cmd
+          <215916627>`_ before proceeding.
+
 .. code-block:: bash
 
     # Set the CORS rules
